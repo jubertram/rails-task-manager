@@ -1,0 +1,13 @@
+<h1><%= @task.title %></h1>
+
+<p class="bg-secondary bg-opacity-10 px-2 py-4"><%= @task.details %></p>
+
+<% if @task.completed? %>
+  <%= "<i class='fa-regular fa-square-check'></i> #{@message}".html_safe %>
+<% else %>
+  <%= "<i class='fa-regular fa-square'></i> #{@message}".html_safe %>
+<% end %><br>
+
+<%= link_to "back to list", tasks_path, class:"text-decoration-none" %><br>
+
+<%= link_to "Edit this task", edit_task_path, class:"text-decoration-none" %>
